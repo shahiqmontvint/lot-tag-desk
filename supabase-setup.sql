@@ -40,7 +40,7 @@ create table if not exists public.lots (
   product       text,
   product_code  text,
   lot_date      date not null,
-  grade         text check (grade is null or grade in ('A','B','C')),
+  grade         text check (grade is null or grade in ('A','B','C','A/B','A/B/C','B/C')),
   ready         integer not null default 0 check (ready   >= 0),
   washing       integer not null default 0 check (washing >= 0),
   mending       integer not null default 0 check (mending >= 0),
